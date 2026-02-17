@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 640" fill="none">
+  <defs>
+    <linearGradient id="bgGlow" x1="116" y1="120" x2="396" y2="612" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="skin" x1="176" y1="56" x2="336" y2="216" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6D2B6" />
+      <stop offset="1" stop-color="#D59B76" />
+    </linearGradient>
+    <linearGradient id="shirt" x1="152" y1="220" x2="360" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" />
+      <stop offset="1" stop-color="#0EA5E9" />
+    </linearGradient>
+    <linearGradient id="pants" x1="176" y1="430" x2="336" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="512" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.35" />
+    </filter>
+    <filter id="glow" x="-120" y="-120" width="752" height="880" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="36" result="blur" />
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.35 0"
+        result="glowOut"
+      />
+      <feMerge>
+        <feMergeNode in="glowOut" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <ellipse cx="256" cy="544" rx="150" ry="44" fill="#0B1220" fill-opacity="0.55" />
+    <ellipse cx="256" cy="470" rx="210" ry="220" fill="url(#bgGlow)" fill-opacity="0.18" />
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="176" y="56" width="160" height="160" rx="26" fill="url(#skin)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" />
+
+    <rect x="108" y="220" width="64" height="210" rx="18" fill="url(#shirt)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" />
+    <rect x="340" y="220" width="64" height="210" rx="18" fill="url(#shirt)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" />
+    <rect x="176" y="220" width="160" height="210" rx="24" fill="url(#shirt)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" />
+
+    <rect x="184" y="430" width="72" height="190" rx="22" fill="url(#pants)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" />
+    <rect x="256" y="430" width="72" height="190" rx="22" fill="url(#pants)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" />
+
+    <rect x="214" y="120" width="20" height="26" rx="8" fill="#0B1220" fill-opacity="0.75" />
+    <rect x="278" y="120" width="20" height="26" rx="8" fill="#0B1220" fill-opacity="0.75" />
+    <rect x="236" y="164" width="40" height="10" rx="5" fill="#0B1220" fill-opacity="0.45" />
+
+    <path
+      d="M196 84c28-28 100-40 120-18 14 14-10 38-34 48-34 14-66 10-86-8-10-10-10-14 0-22Z"
+      fill="#FFFFFF"
+      fill-opacity="0.10"
+    />
+    <path
+      d="M196 248c22-22 98-30 116-12 14 14-8 34-30 44-32 14-62 10-82-6-10-8-10-12-4-18Z"
+      fill="#FFFFFF"
+      fill-opacity="0.08"
+    />
+  </g>
+</svg>
